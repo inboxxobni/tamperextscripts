@@ -31,13 +31,14 @@ Status: in progress
 - Record the GPL/proprietary boundary.
 - Define the first testable product slice.
 
-### M1 — Modern extension shell
+### M1 — Modern extension shell and developer tooling
 
 Status: planned
 
 - Create a distinct extension identity and branding.
 - Add a Manifest V3 build that loads in a disposable Chromium profile.
-- Introduce a reproducible build command and basic lint/test commands.
+- Introduce a reproducible build command, local watch/dev server, structured
+  redacted logging, browser test harness, verification reporter, and CI gate.
 - Keep the legacy source available as provenance/reference while new code is
   isolated in focused modules.
 
@@ -101,4 +102,4 @@ legacy browser support come after the core export workflow is reliable.
 ## Spec index
 
 - `specs/001-mv3-exporter-runtime/spec.md` — first implementation milestone
-
+- `specs/002-developer-tooling/spec.md` — debugging, logging, build, test, and CI infrastructure
