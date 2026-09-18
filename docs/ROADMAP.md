@@ -30,6 +30,7 @@ Status: in progress
 - Establish the roadmap, constitution, specifications, and agent agreement.
 - Record the GPL/proprietary boundary.
 - Define the first testable product slice.
+- Specification set: `specs/003-identity-provenance/spec.md`.
 
 ### M1 — Modern extension shell and developer tooling
 
@@ -41,6 +42,9 @@ Status: planned
   redacted logging, browser test harness, verification reporter, and CI gate.
 - Keep the legacy source available as provenance/reference while new code is
   isolated in focused modules.
+- Specification set: `specs/002-developer-tooling/spec.md`,
+  `specs/004-mv3-runtime-shell/spec.md`, and
+  `specs/007-security-hardening/spec.md`.
 
 Exit condition: a clean checkout produces a loadable MV3 unpacked extension
 without modifying the user's live Chrome profile.
@@ -54,6 +58,7 @@ Status: planned
 - Handle service-worker startup and suspension without indefinite callers.
 - Add deterministic unit tests and a browser regression test for reload/close
   races.
+- Specification set: `specs/005-userscript-engine/spec.md`.
 
 Exit condition: repeated tab open, reload, navigation, and close cycles produce
 no unhandled stale-tab errors and do not block unrelated tabs.
@@ -66,6 +71,7 @@ Status: planned
 - Support Markdown, JSON, HTML, plain text, screenshots, and bulk export.
 - Preserve conversation titles and stable file naming.
 - Scope execution to supported ChatGPT origins.
+- Specification set: `specs/006-chatgpt-exporter/spec.md`.
 
 Exit condition: each visible export action works in a disposable Chromium
 profile and has a browser-level regression test where DOM behavior matters.
@@ -78,6 +84,7 @@ Status: planned
 - Add import/export of user scripts in a portable format.
 - Add only the GM APIs required by migrated exporter scripts.
 - Document unsupported legacy APIs explicitly.
+- Specification set: `specs/008-compatibility-migration/spec.md`.
 
 Exit condition: the user's exporter scripts can be migrated without requiring
 Tampermonkey to remain installed in the dedicated profile.
@@ -91,6 +98,7 @@ Status: planned
 - Add contributor documentation, release notes, and reproducible artifacts.
 - Decide whether the project is a successor, compatibility layer, or focused
   exporter based on actual adoption and maintenance capacity.
+- Specification set: `specs/009-release-upstream/spec.md`.
 
 ## Scope boundaries
 
@@ -103,3 +111,11 @@ legacy browser support come after the core export workflow is reliable.
 
 - `specs/001-mv3-exporter-runtime/spec.md` — first implementation milestone
 - `specs/002-developer-tooling/spec.md` — debugging, logging, build, test, and CI infrastructure
+- `specs/README.md` — complete specification index and dependency order
+- `specs/003-identity-provenance/spec.md` — distinct GPL identity and source boundary
+- `specs/004-mv3-runtime-shell/spec.md` — modern Chromium extension shell
+- `specs/005-userscript-engine/spec.md` — metadata, injection, and lifecycle safety
+- `specs/006-chatgpt-exporter/spec.md` — Markdown/JSON/HTML/text/screenshot/bulk export
+- `specs/007-security-hardening/spec.md` — permissions, redaction, and secure output
+- `specs/008-compatibility-migration/spec.md` — custom script import and supported GM APIs
+- `specs/009-release-upstream/spec.md` — release, CI, and upstream collaboration
